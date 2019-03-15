@@ -12,7 +12,6 @@ import com.sankuai.inf.leaf.server.exception.InitException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -25,8 +24,7 @@ public class SegmentService {
         Properties properties = PropertyFactory.getProperties();
         boolean flag = Boolean.parseBoolean(properties.getProperty(Constants.LEAF_SEGMENT_ENABLE, "true"));
         if (flag) {
-
-
+            
             // Config dataSource
             dataSource = new DruidDataSource();
             dataSource.setUrl(properties.getProperty(Constants.LEAF_JDBC_URL));
